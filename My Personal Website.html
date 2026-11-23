@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website</title>
+
+    <style>
+        /* General Design */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #5b2c6f;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: yellow;
+            background-color: #884ea0;
+        }
+
+        /* Gallery Dropdown */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #5b2c6f;
+            min-width: 150px;
+            top: 100%;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown:focus-within .dropdown-content {
+            display: block;
+        }
+
+        /* Sections */
+        section {
+            min-height: 400px;
+            padding: 40px;
+            text-align: center;
+            scroll-margin-top: 60px;
+        }
+
+        #home {
+            background-color: lightblue;
+        }
+
+        #about {
+            background-color: lightpink;
+        }
+
+        #gallery {
+            background-color: lightyellow;
+        }
+
+        #photos {
+            background-color: #fff4cc;
+        }
+
+        #videos {
+            background-color: lightgreen;
+        }
+
+        #projects {
+            background-color: lavender;
+        }
+
+        #contact {
+            background-color: lightgray;
+        }
+
+        /* Home Picture with Transformation */
+        .transform-box {
+            width: 150px;
+            height: 150px;
+            margin: 40px auto;
+            transition: 1s;
+        }
+
+        .transform-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .transform-box:hover {
+            transform: rotate(15deg) scale(1.2) translateY(-10px);
+        }
+
+        /* Gallery Images */
+        #gallery img,
+        #photos img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid white;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        #gallery img:hover,
+        #photos img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Video */
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Animation Example */
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            position: relative;
+            animation: moveBox 4s infinite;
+            margin: 50px;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 0;
+                background-color: crimson;
+            }
+
+            50% {
+                left: 300px;
+                background-color: gold;
+            }
+
+            100% {
+                left: 0;
+                background-color: crimson;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li class="dropdown">
+                <a href="#gallery">Gallery ▾</a>
+
+                <div class="dropdown-content">
+                    <a href="#photos">Photos</a>
+                    <a href="#videos">Videos</a>
+                    <a href="#projects">Projects</a>
+                </div>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+
+        <h1>Home</h1>
+
+        <div class="transform-box">
+            <img src="cutie.jpg" alt="My Picture">
+        </div>
+
+        <div class="animation-box"></div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+
+        <h1>About Me</h1>
+
+        <p>Name: Micaela S. Grafil</p>
+        <p>Grade Level: Grade 10</p>
+        <p>Hobbies: Playing online games and watching K-drama.</p>
+        <p>Dream Job: To become a Teacher.</p>
+
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+
+        <h1>My Gallery</h1>
+
+        <p>Welcome to my collection of photos!</p>
+
+        <img src=" family.jpg" alt="My Photo">
+    </section>
+
+    <!-- Photos Section -->
+    <section id="photos">
+
+        <h1>My Photos</h1>
+
+        <p>Here is one of my pictures.</p>
+
+        <img src="Micaela.jpeg" alt="My Photo">
+
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos">
+
+        <h1>My Videos</h1>
+
+        <p>Watch my video below.</p>
+
+        <video width="300" controls>
+            <source src="My Favorite video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+        <h1>My Projects</h1>
+
+        <p>Here are my school activities and projects.</p>
+
+        <h3>My Activities</h3>
+
+        <p>Activity #1 - HTML</p>
+        <p>Activity #2</p>
+        <p>Activity #3</p>
+        <p>Activity #4 - MS Word Activity</p>
+        <p>Activity #5</p>
+        <p>Activity #6 - Three Types of CSS Styling</p>
+        <p>Activity #7</p>
+        <p>Activity #8</p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h1>Contact Me</h1>
+
+        <p>Email: micaelagrafil3@gmail.com</p>
+        <p>Facebook: Micaela S. Grafil</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
